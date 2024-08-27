@@ -1,10 +1,9 @@
 package com.tarker.booking_api.core.dtos;
 
-import java.time.LocalDateTime;
 import java.util.Date;
 
 public class ExceptionResponse {
-    private LocalDateTime timestamp;
+    private Date timestamp;
     private String message;
     private String description;
 
@@ -14,11 +13,11 @@ public class ExceptionResponse {
         this.description = description;
     }
 
-    public LocalDateTime getTimestamp() {
+    public Date getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(LocalDateTime timestamp) {
+    public void setTimestamp(Date timestamp) {
         this.timestamp = timestamp;
     }
 
