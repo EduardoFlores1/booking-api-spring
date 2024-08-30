@@ -1,6 +1,6 @@
-package com.tarker.booking_api.presentation.exceptions;
+package com.tarker.booking_api.core.exceptions;
 
-import com.tarker.booking_api.core.dtos.*;
+import com.tarker.booking_api.core.exceptions.models.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

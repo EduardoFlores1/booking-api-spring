@@ -1,6 +1,6 @@
 package com.tarker.booking_api.core.application.usecases.user.getUser;
 
-import com.tarker.booking_api.core.domain.entities.BookingEntity;
+import com.tarker.booking_api.core.domain.models.BookingModel;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ public class GetUserByIdModel {
     private String lastName;
     private String username;
     private String password;
-    private List<BookingEntity> bookings;
+    private List<BookingModel> bookings;
 
     public GetUserByIdModel() {}
 
@@ -54,11 +54,11 @@ public class GetUserByIdModel {
         this.password = password;
     }
 
-    public List<BookingEntity> getBookings() {
+    public List<BookingModel> getBookings() {
         return bookings;
     }
 
-    public void setBookings(List<BookingEntity> bookings) {
+    public void setBookings(List<BookingModel> bookings) {
         this.bookings = bookings;
     }
 }

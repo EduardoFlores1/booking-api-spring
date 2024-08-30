@@ -2,7 +2,7 @@ package com.tarker.booking_api.core.application.usecases.user.createUser;
 
 import com.tarker.booking_api.core.application.mappers.UserMapper;
 import com.tarker.booking_api.core.application.repositories.IUserRepository;
-import com.tarker.booking_api.core.dtos.CreateModelException;
+import com.tarker.booking_api.core.exceptions.models.CreateModelException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;

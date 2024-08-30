@@ -3,14 +3,13 @@ package com.tarker.booking_api.core.application.usecases.user.getUser;
 import com.tarker.booking_api.core.application.mappers.UserMapper;
 import com.tarker.booking_api.core.application.repositories.IUserRepository;
 import com.tarker.booking_api.core.domain.entities.UserEntity;
-import com.tarker.booking_api.core.dtos.ModelNotFoundException;
+import com.tarker.booking_api.core.exceptions.models.ModelNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.NoSuchElementException;
-import java.util.Optional;
 
 @Service
 public class GetUserByIdUseCase implements IGetUserByIdUseCase {

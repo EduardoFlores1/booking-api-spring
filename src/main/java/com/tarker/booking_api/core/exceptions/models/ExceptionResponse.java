@@ -1,4 +1,4 @@
-package com.tarker.booking_api.core.dtos;
+package com.tarker.booking_api.core.exceptions.models;
 
 import java.util.Date;
 

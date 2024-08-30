@@ -2,8 +2,8 @@ package com.tarker.booking_api.core.application.usecases.user.updateUser;
 
 import com.tarker.booking_api.core.application.repositories.IUserRepository;
 import com.tarker.booking_api.core.domain.entities.UserEntity;
-import com.tarker.booking_api.core.dtos.ModelNotFoundException;
-import com.tarker.booking_api.core.dtos.UpdateModelException;
+import com.tarker.booking_api.core.exceptions.models.ModelNotFoundException;
+import com.tarker.booking_api.core.exceptions.models.UpdateModelException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -37,6 +37,7 @@ public class UpdateUserUseCase implements IUpdateUserUseCase{
         } catch (NoSuchElementException ex) {
             log.error("Error al actualizar, usuario con id: {} no encontrado", userId);
             throw new ModelNotFoundException("Error al actualizar, usuario con id: " + userId + " no encontrado");
+
         } catch (DataIntegrityViolationException ex) {
             log.error("Error al actualizar usuario. id: {}, user: {}, message: {}", userId, updateUserModel, ex.getMessage());
             throw new UpdateModelException("Error al actualizar usuario, " + ex.getMessage());
